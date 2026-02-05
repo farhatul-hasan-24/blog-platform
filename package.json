@@ -1,0 +1,27 @@
+{
+  "name": "blog-platform",
+  "version": "1.0.0",
+  "description": "Full-stack blog platform with role-based access control",
+  "scripts": {
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "server-dev": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "blog",
+    "react",
+    "node",
+    "express",
+    "mongodb",
+    "rbac",
+    "authentication"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
