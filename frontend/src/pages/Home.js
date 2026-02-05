@@ -20,9 +20,12 @@ const Home = () => {
     try {
       const response = await postsAPI.getAllPosts();
       const postsData = response.data.data;
-      
-      // Sort posts by average rating (highest first)
-      const sortedPosts = postsData.sort((a, b) => {
+
+      // Show only rated posts, then sort by average rating (highest first)
+      const ratedPosts = postsData.filter(
+        (post) => Array.isArray(post.ratings) && post.ratings.length > 0
+      );
+      const sortedPosts = ratedPosts.sort((a, b) => {
         const getAvgRating = (post) => {
           if (!post.ratings || post.ratings.length === 0) return 0;
           const total = post.ratings.reduce((sum, r) => sum + r.value, 0);

@@ -1,5 +1,5 @@
 .home-page {
-  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  background: radial-gradient(circle at top, #eef2ff 0%, #f8fafc 40%, #ffffff 100%);
   overflow: hidden;
 }
 
@@ -7,7 +7,7 @@
 .hero-section {
   position: relative;
   padding: 100px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0ea5e9 100%);
   overflow: hidden;
   min-height: 700px;
   display: flex;
@@ -88,6 +88,7 @@
   line-height: 1.2;
   margin-bottom: 20px;
   animation: slideInLeft 0.8s ease;
+  letter-spacing: -0.5px;
 }
 
 .gradient-text {
@@ -138,14 +139,14 @@
 }
 
 .btn-primary.btn-lg {
-  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
   color: white;
-  box-shadow: 0 10px 30px rgba(255, 216, 155, 0.3);
+  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.35);
 }
 
 .btn-primary.btn-lg:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(255, 216, 155, 0.4);
+  box-shadow: 0 18px 45px rgba(249, 115, 22, 0.45);
 }
 
 .btn-secondary.btn-lg {
@@ -249,13 +250,26 @@
 /* ===== FEATURED SECTION ===== */
 .featured-section {
   padding: 80px 0;
-  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+}
+
+.section-header p {
+  color: #475569;
 }
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(435px, 1fr));
+  gap: 24px;
+  align-items: start;
+  justify-items: center;
 }
 
 /* ===== EMPTY STATE ===== */

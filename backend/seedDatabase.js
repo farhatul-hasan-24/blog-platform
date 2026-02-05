@@ -16,10 +16,13 @@ const seedData = async () => {
     });
     console.log('✅ Connected to MongoDB');
 
-    // Clear existing data
-    await User.deleteMany({});
-    await Post.deleteMany({});
-    console.log('🗑️  Cleared existing data');
+    // Prevent accidental data loss
+    const existingUsers = await User.countDocuments();
+    const existingPosts = await Post.countDocuments();
+    if (existingUsers > 0 || existingPosts > 0) {
+      console.log('⚠️  Database already has data. Seeding skipped to prevent data loss.');
+      process.exit(0);
+    }
 
     // Create admin user
     const adminPassword = await bcrypt.hash('admin123', 10);

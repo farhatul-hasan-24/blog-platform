@@ -18,6 +18,7 @@ import MyPostDetail from './pages/MyPostDetail';
 import EditPost from './pages/EditPost';
 import PublicPostDetail from './pages/PublicPostDetail';
 import Profile from './pages/Profile';
+import Blogs from './pages/Blogs';
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <main className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/blogs" element={<Blogs />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />

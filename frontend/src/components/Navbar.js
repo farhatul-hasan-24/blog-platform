@@ -40,15 +40,11 @@ const Navbar = () => {
           
           <div className="navbar-menu">
             <Link to="/" className="navbar-link">Home</Link>
+            <Link to="/blogs" className="navbar-link">Blogs</Link>
             
             {isAuthenticated() ? (
               <>
-                {!isAdmin() && (
-                  <>
-                    <Link to="/dashboard" className="navbar-link">Dashboard</Link>
-                    <Link to="/my-posts" className="navbar-link">My Posts</Link>
-                  </>
-                )}
+                {!isAdmin() && null}
                 {isAdmin() && (
                   <Link to="/admin" className="navbar-link">Admin Dashboard</Link>
                 )}
@@ -69,6 +65,19 @@ const Navbar = () => {
                         </div>
                       </div>
                       <div className="dropdown-divider"></div>
+                      {!isAdmin() && (
+                        <>
+                          <Link to="/dashboard" className="dropdown-item" onClick={() => setShowDropdown(false)}>
+                            <span className="dropdown-icon">📊</span>
+                            Dashboard
+                          </Link>
+                          <Link to="/my-posts" className="dropdown-item" onClick={() => setShowDropdown(false)}>
+                            <span className="dropdown-icon">🗂️</span>
+                            My Posts
+                          </Link>
+                          <div className="dropdown-divider"></div>
+                        </>
+                      )}
                       <button onClick={handleProfileClick} className="dropdown-item">
                         <span className="dropdown-icon">👤</span>
                         Profile
