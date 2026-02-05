@@ -35,6 +35,7 @@
   overflow-wrap: break-word;
   display: flex;
   display: -webkit-box;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -79,6 +80,7 @@
   word-wrap: break-word;
   margin-bottom: 12px;
   display: -webkit-box;
+  line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
